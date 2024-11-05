@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <div className='space-y-12 mt-12'>
       <MyInfo />
-      <Section heading='About'>
+      <Section title='About'>
         <p>
           I&apos;ve spent the last 5 years building software. TypeScript and
           React are my weapons of choice.
         </p>
       </Section>
 
-      <Section heading='Connect'>
+      <Section title='Connect'>
         <p>
           Follow me on <LinkCTA href='https://x.com/somkumar_va'>X</LinkCTA>
           ,view my code and open-source projects on{" "}
