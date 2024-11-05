@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+  html{
+    @apply bg-background text-foreground font-semibold
+  }
+}
+
 :root {
   --background: #111111;
   --foreground: #eeeeee;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
 }
 
 .container{
