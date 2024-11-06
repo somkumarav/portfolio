@@ -4,7 +4,7 @@ import { ConnectSection } from "../components/sections/connect";
 
 export default function Home() {
   return (
-    <div className='space-y-12 mt-12'>
+    <div className='space-y-12 mt-16'>
       <MyInfo />
       <AboutSection />
       <ConnectSection />
