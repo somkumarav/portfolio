@@ -7,6 +7,8 @@ export const ProjectSection = () => {
       <Project
         title='Cloud photo share'
         tags={["React", "Next.js", "Typescript", "AWS", "CloudFlare R2"]}
+        websiteLink='https://www.google.com'
+        githubLink='https://github.com/somkumarav/cloud-media-share'
       >
         Ever taken a bunch of amazing photos on your last trip, wedding or
         family gathering? You probably snapped a tone of photos, right? Tired of
