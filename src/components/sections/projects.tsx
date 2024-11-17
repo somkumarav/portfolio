@@ -6,7 +6,7 @@ export const ProjectSection = () => {
     <Section title='Projects'>
       <Project
         title='Cloud photo share'
-        tags={["React", "Next.js", "Typescript", "AWS", "CloudFlare R2"]}
+        tags={["Next.js", "Typescript", "AWS", "CloudFlare R2", "TailwindCSS"]}
         websiteLink='https://www.google.com'
         githubLink='https://github.com/somkumarav/cloud-media-share'
       >
