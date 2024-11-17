@@ -8,13 +8,13 @@ export const Socials = () => {
     <div className='flex items-center space-x-4'>
       <p>Find me on</p>
       <LinkCTA href='https://github.com/somkumarav'>
-        <GithubLogo />
+        <GithubLogo className='h-5 w-5' />
       </LinkCTA>
       <LinkCTA href='https://x.com/somkumar_va'>
-        <XLogo />
+        <XLogo className='h-5 w-5' />
       </LinkCTA>
       <LinkCTA href='https://www.linkedin.com/in/somkumarva/'>
-        <LinkedinLogo />
+        <LinkedinLogo className='h-5 w-5' />
       </LinkCTA>
     </div>
   );

@@ -13,7 +13,7 @@ export const GithubLogo = ({
       height='1em'
       viewBox='0 0 24 24'
       aria-hidden='true'
-      className={cn("h-6 w-6 transition duration-200", className)}
+      className={cn("transition duration-200", className)}
       focusable='false'
       data-icon='mdi:github'
     >

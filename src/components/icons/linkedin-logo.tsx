@@ -7,7 +7,7 @@ export const LinkedinLogo = ({ className }: { className?: string }) => {
       height='1em'
       viewBox='0 0 24 24'
       aria-hidden='true'
-      className={cn("h-6 w-6", className)}
+      className={cn(className)}
       focusable='false'
       data-icon='mdi:linkedin'
     >
