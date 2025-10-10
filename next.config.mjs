@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   /* config options here */
+  output: "export",
+  basePath: "/nextjs-github-pages",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
