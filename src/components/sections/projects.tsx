@@ -7,7 +7,7 @@ export const ProjectSection = () => {
       <Project
         title='Cloud photo share'
         tags={["Next.js", "Typescript", "AWS", "CloudFlare R2", "TailwindCSS"]}
-        websiteLink='https://cloud-media-share.vercel.app'
+        // websiteLink='https://cloud-media-share.vercel.app'
         githubLink='https://github.com/somkumarav/cloud-media-share'
       >
         Ever taken a bunch of amazing photos on your last trip, wedding or
