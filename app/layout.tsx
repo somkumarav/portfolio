@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Noise } from "@/components/noise";
 
 export const metadata: Metadata = {
   title: "Somkumar V A",
@@ -14,8 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`antialiased max-w-screen-sm mx-auto px-4`}>
-        {children}
+      <body className='antialiased'>
+        <div className='max-w-screen-sm mx-auto px-4'>
+          <Noise />
+          <div>{children}</div>
+        </div>
       </body>
     </html>
   );
