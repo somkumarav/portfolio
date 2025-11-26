@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  html{
-    @apply bg-background text-foreground font-semibold
+@layer base {
+  html {
+    @apply bg-background text-foreground font-medium;
   }
 }
 
@@ -13,7 +13,7 @@
   --foreground: #eeeeee;
 }
 
-.container{
+.container {
   width: 40%;
-  margin: 0 auto
+  margin: 0 auto;
 }

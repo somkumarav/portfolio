@@ -11,35 +11,32 @@ export const Project = (props: {
   githubLink?: string;
 }) => {
   return (
-    <div className='space-y-2'>
-      <p className='text-foreground'>{props.title}</p>
+    <div className='space-y-4 bg-white/5 px-4 py-3 rounded-md'>
+      <div className='flex items-center justify-between'>
+        <p className='text-foreground'>{props.title}</p>
+        <div className='flex items-center flex-wrap gap-2'>
+          {props.websiteLink ? (
+            <ProjectExternalLink href={props.websiteLink} logo={<WebLogo />} />
+          ) : null}
+
+          {props.githubLink ? (
+            <ProjectExternalLink
+              href={props.githubLink}
+              logo={<GithubLogo />}
+            />
+          ) : null}
+        </div>
+      </div>
       <p>{props.children}</p>
       <div className='flex flex-wrap gap-2'>
         {props.tags?.map((item) => (
           <div
             key={item}
-            className='px-2 py-1 bg-neutral-800 text-white rounded-md text-sm'
+            className='px-2 py-1 bg-neutral-700 text-white rounded-md text-sm'
           >
             {item}
           </div>
         ))}
-      </div>
-      <div className='flex items-center flex-wrap gap-2'>
-        {props.websiteLink ? (
-          <ProjectExternalLink
-            href={props.websiteLink}
-            logo={<WebLogo />}
-            label='website'
-          />
-        ) : null}
-
-        {props.githubLink ? (
-          <ProjectExternalLink
-            href={props.githubLink}
-            logo={<GithubLogo />}
-            label='source'
-          />
-        ) : null}
       </div>
     </div>
   );
