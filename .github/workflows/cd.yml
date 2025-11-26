@@ -30,7 +30,6 @@ jobs:
           PAT: ${{ secrets.PAT }}
         run: |
           git clone https://github.com/somkumarav/k8s.git
-          cd staging-ops
           sed -i 's|image: somkumarva/portfolio:.*|image: somkumarva/portfolio:${{ github.sha }}|' portfolio/deployment.yml
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
