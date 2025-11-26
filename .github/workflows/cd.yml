@@ -30,11 +30,10 @@ jobs:
           PAT: ${{ secrets.PAT }}
         run: |
           git clone https://github.com/somkumarav/k8s.git
-          ls
           cd k8s
           sed -i 's|image: somkumarva/portfolio:.*|image: somkumarva/portfolio:${{ github.sha }}|' ./portfolio/deployment.yml
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add portfolio/deployment.yml
           git commit -m "update(portfolio): deployment image to ${{ github.sha }}"
-          git push https://github.com/somkumarav/k8s.git main
+          git push https://${{ secrets.PAT }}@github.com/somkumarav/k8s.git main
