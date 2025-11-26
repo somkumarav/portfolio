@@ -36,4 +36,4 @@ jobs:
           git config user.email "actions@github.com"
           git add portfolio/deployment.yml
           git commit -m "update(portfolio): deployment image to ${{ github.sha }}"
-          git push https://${{ secrets.PAT }}@github.com/somkumarav/k8s.git main
+          git push https://${PAT}@github.com/somkumarav/k8s.git main
