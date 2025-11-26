@@ -25,15 +25,15 @@ jobs:
           push: true
           tags: somkumarva/portfolio:${{ github.sha }}
 
-      # - name: Clone staging-ops repo, update, and push
-      #   env:
-      #     PAT: ${{ secrets.PAT }}
-      #   run: |
-      #     git clone https://github.com/code100x/staging-ops.git
-      #     cd staging-ops
-      #     sed -i 's|image: somkumarva/portfolio:.*|image: somkumarva/portfolio:${{ github.sha }}|' prod/cms/deployment.yml
-      #     git config user.name "GitHub Actions Bot"
-      #     git config user.email "actions@github.com"
-      #     git add prod/cms/deployment.yml
-      #     git commit -m "Update cms image to ${{ github.sha }}"
-      #     git push https://${PAT}@github.com/code100x/staging-ops.git main
+      - name: Clone staging-ops repo, update, and push
+        env:
+          PAT: ${{ secrets.PAT }}
+        run: |
+          git clone https://github.com/somkumarav/k8s.git
+          cd staging-ops
+          sed -i 's|image: somkumarva/portfolio:.*|image: somkumarva/portfolio:${{ github.sha }}|' portfolio/deployment.yml
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add portfolio/deployment.yml
+          git commit -m "update(portfolio): deployment image to ${{ github.sha }}"
+          git push https://github.com/somkumarav/k8s.git main
