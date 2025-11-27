@@ -1,19 +1,15 @@
-import { ReactNode } from "react";
 import { GithubLogo } from "./icons/github-logo";
 import { WebLogo } from "./icons/web-logo";
 import { ProjectExternalLink } from "./project-external-link";
+import { Markdown } from "./markdown";
+import { TProject } from "./sections/projects-section";
+import { Tag } from "./tag";
 
-export const Project = (props: {
-  title: string;
-  children: string | ReactNode;
-  tags?: string[];
-  websiteLink?: string;
-  githubLink?: string;
-}) => {
+export const Project = (props: TProject) => {
   return (
     <div className='space-y-4 bg-white/5 px-4 py-3 rounded-md'>
       <div className='flex items-center justify-between'>
-        <p className='text-foreground'>{props.title}</p>
+        <p className='text-foreground'>{props.projectName}</p>
         <div className='flex items-center flex-wrap gap-2'>
           {props.websiteLink ? (
             <ProjectExternalLink href={props.websiteLink} logo={<WebLogo />} />
@@ -27,15 +23,10 @@ export const Project = (props: {
           ) : null}
         </div>
       </div>
-      <p>{props.children}</p>
+      <Markdown>{props.description.trim()}</Markdown>
       <div className='flex flex-wrap gap-2'>
         {props.tags?.map((item) => (
-          <div
-            key={item}
-            className='px-2 py-1 bg-neutral-700 text-white rounded-md text-sm'
-          >
-            {item}
-          </div>
+          <Tag key={item} item={item} />
         ))}
       </div>
     </div>
