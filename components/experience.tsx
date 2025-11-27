@@ -8,7 +8,7 @@ export const Experience = (props: TExperience) => {
     <div className='bg-white/5 py-3 px-4 rounded-md'>
       <div className='flex items-center justify-between'>
         <div className='flex items-center space-x-1 hover:first:text-white first:transition-colors'>
-          <ProjectExternalLink href='' logo={<WebLogo />} />
+          <ProjectExternalLink href={props.websiteLink} logo={<WebLogo />} />
           <a href={props.websiteLink} target='_blank' className='text-white'>
             {props.companyName}
           </a>
