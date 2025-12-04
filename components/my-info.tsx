@@ -17,7 +17,7 @@ export const MyInfo = () => {
         />
         <div>
           <h2 className='text-lg font-semibold'>Somkumar V A</h2>
-          <p className='text-neutral-400'>FullStack Developer</p>
+          <p className='text-neutral-400'>Developer</p>
         </div>
       </div>
       <p className='text-neutral-400 mt-4 mb-2'>
