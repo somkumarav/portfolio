@@ -5,7 +5,7 @@ import { Markdown } from "./markdown";
 
 export const Experience = (props: TExperience) => {
   return (
-    <div className='bg-white/5 py-3 px-4 rounded-md'>
+    <div className='bg-white/5 py-3 px-4 rounded-md space-y-4'>
       <div className='flex items-center justify-between'>
         <div className='flex items-center space-x-1 hover:first:text-white first:transition-colors'>
           <ProjectExternalLink href={props.websiteLink} logo={<WebLogo />} />
