@@ -8,8 +8,8 @@ export const AboutSection = () => {
     <Section title='About'>
       <p>
         Hi I&apos;am Somu, I&apos;ve spent the last {currentYear - 2019} years
-        building software. TypeScript and React are my weapons of choice.
-        Cooking and driving are my hobbies.
+        crafting software. TypeScript and Next.js are my bread and peanut butter.
+        I like to cook and drive when I have some spare time.
       </p>
 
       <Socials />
