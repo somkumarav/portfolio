@@ -1,16 +1,15 @@
-FROM node:23-alpine
-RUN corepack enable && corepack prepare pnpm@latest --activate
+FROM oven/bun:latest
 WORKDIR /usr/src/app
 
 COPY ./package.json ./package.json
-COPY ./pnpm-lock.yaml ./pnpm-lock.yaml
+COPY ./bun.lock ./bun.lock
 
-RUN pnpm install
+RUN bun install
 
 COPY . .
 
-RUN pnpm build
+RUN bun run build
 
 EXPOSE 3000
 
-CMD ["pnpm", "start"]
+CMD ["bun", "run", "start"]
