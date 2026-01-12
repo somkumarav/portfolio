@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root{
+  --background: #111111;
+  --foreground: #eeeeee;
+}
+
+@theme inline{
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@layer base {
+  html {
+    @apply bg-background text-foreground font-medium;
+  }
+}
+
+.container {
+  width: 40%;
+  margin: 0 auto;
+}
