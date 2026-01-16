@@ -9,7 +9,7 @@ export const Project = (props: TProject) => {
   return (
     <div className='space-y-4 bg-white/5 px-4 py-3 rounded-md'>
       <div className='flex items-center justify-between'>
-        <p className='text-foreground'>{props.projectName}</p>
+        <div className='text-foreground'>{props.projectName}</div>
         <div className='flex items-center flex-wrap gap-2'>
           {props.websiteLink ? (
             <ProjectExternalLink href={props.websiteLink} logo={<WebLogo />} />

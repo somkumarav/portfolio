@@ -1,8 +1,10 @@
+import { ReactNode } from "react";
 import { Project } from "../project";
 import { Section } from "../section";
+import { FlipDotGrid } from "flipdots";
 
 export type TProject = {
-  projectName: string;
+  projectName: string | ReactNode;
   websiteLink?: string;
   githubLink?: string;
   description: string;
@@ -47,9 +49,9 @@ export const ProjectSection = () => {
   return (
     <Section title='Projects'>
       <div className='space-y-2'>
-      {projects.map((project) => {
-        return <Project key={project.projectName} {...project} />;
-      })}
+        {projects.map((project, index) => {
+          return <Project key={index} {...project} />;
+        })}
       </div>
     </Section>
   );
