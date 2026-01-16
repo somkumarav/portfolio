@@ -25,14 +25,32 @@ const projects: TProject[] = [
       "Turborepo",
     ],
   },
+  {
+    projectName: (
+      <FlipDotGrid
+        text='Flipdots'
+        size={3}
+        gap={1}
+        activeColor='#eeeeee'
+        inactiveColor='#333333'
+      />
+    ),
+    websiteLink: "https://www.npmjs.com/package/flipdots",
+    githubLink: "https://github.com/somkumarav/flipdots",
+    description:
+      "I was scrolling through reels one day and saw a cool oldschool flip-dot display project someone made for Opensauce. I loved the project, so I built an npm package which recreates the same effect for web developers. I have used that package for displaying the clock in the about section.",
+    tags: ["React.js", "Typescript", "TailwindCSS", "npm"],
+  },
 ];
 
 export const ProjectSection = () => {
   return (
     <Section title='Projects'>
+      <div className='space-y-2'>
       {projects.map((project) => {
         return <Project key={project.projectName} {...project} />;
       })}
+      </div>
     </Section>
   );
 };
