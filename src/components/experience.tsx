@@ -1,3 +1,6 @@
+"use client";
+
+import posthog from "posthog-js";
 import { WebLogo } from "./icons/web-logo";
 import { ProjectExternalLink } from "./project-external-link";
 import { TExperience } from "./sections/experience-section";
@@ -9,7 +12,17 @@ export const Experience = (props: TExperience) => {
       <div className='flex items-center justify-between'>
         <div className='flex items-center space-x-1 hover:first:text-white first:transition-colors'>
           <ProjectExternalLink href={props.websiteLink} logo={<WebLogo />} />
-          <a href={props.websiteLink} target='_blank' className='text-white'>
+          <a
+            href={props.websiteLink}
+            target='_blank'
+            className='text-white'
+            onClick={() =>
+              posthog.capture("experience_company_clicked", {
+                company_name: props.companyName,
+                href: props.websiteLink,
+              })
+            }
+          >
             {props.companyName}
           </a>
         </div>

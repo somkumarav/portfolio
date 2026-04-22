@@ -9,6 +9,7 @@ export const LinkCTA = ({
   children: ReactNode;
   href: string;
   removeUnderLine?: boolean;
+  onClick?: () => void;
 }) => {
   return (
     <Link
@@ -18,6 +19,7 @@ export const LinkCTA = ({
         !removeUnderLine ? "underline" : ""
       )}
       target='_blank'
+      onClick={props.onClick}
     >
       {props.children}
     </Link>
